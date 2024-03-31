@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Taifex Information</title>
+</head>
+<body>
+<h1>Taifex Information</h1>
+
+<table>
+    <thead>
+    <tr>
+        <th>USD to NTD</th>
+        <th>RMB to NTD</th>
+        <th>USD to RMB</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="taifex : ${taifexList}">
+        <td th:text="${taifex.USD_NTD}"></td>
+        <td th:text="${taifex.RMB_NTD}"></td>
+        <td th:text="${taifex.USD_RMB}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
